@@ -1,0 +1,42 @@
+node -e "console.log(crypto.randomBytes(32).toString('hex'))"
+//to generate - to generate a suitable string for the session secret:
+
+
+>> npx create-react-app my-project
+>> npm install -D tailwindcss
+>> npx tailwindcss init  
+>> npm install react-icons --save
+>> npm install react-typed --save / --force
+>> npm install react-router-dom --save / --force
+>> npm run start
+>> npm i react-redux
+>> npm i react-loading-skeleton
+>> npm install axios
+>> npm i react-type-animatiion
+>> npm i autoprefixer
+>> npm i framer-motion
+>> npm i react-scroll
+>> npm i swiper
+
+
+#### del from src - App.css/App.test.js/logo.svg/reportWebVitals.js/setupTest.js
+#### pesticide chrom extension shows the frid position of your content
+#### https://picsum.photos/ - for random images
+#### https://fakestoreapi.com/docs - free 
+/*---------------------------------------------------------
+https://tailwindcss.com/docs/guides/create-react-app
+---------------------------------------------------------*/
+
+FOR tailwindcss
+//update index.css 
+//update tailwind.config.js
+
+
+//state management
+// Redux or Context API - https://www.youtube.com/watch?v=tEMrD9t85v4&t=358s&ab_channel=PedroTech - 27:37
+
+
+>> npm i react-scroll
+//usage -- scroll to different section of the screen
+ ---- import {Link } from 'react-scroll'  
+//<Link to={'href'} spy={true} offset={-200} smooth={true} duration={500} offset={-50} className='font-bold transiton-all duration-300 onClick={  }'>{link}</Link>
