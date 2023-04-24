@@ -51,7 +51,7 @@ const Login = () => {
 
       <div className={!showPassword ? "hidden":"flex flex-col justify-center items-center space-y-5"}>
       <input {...formik.getFieldProps('password')} type="password" placeholder='Password' className="textbox" />
-       <button type='submit' className='btn'>Let's Go</button>
+       <button type='submit' className='btn'>Sign In</button>
       </div>
 
       </form>
