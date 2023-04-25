@@ -56,7 +56,7 @@ const Login = () => {
 
       </form>
        <p className={showPassword ? "hidden":"text-center my-5 text-gray-500 text-sm"}>Not a Member? <a href="/register" className=" text-red-600">Register Now</a></p>
-       <p className={!showPassword ? "hidden":"text-center my-5 text-gray-500 text-sm"}>Forgot Password? <a href="/register" className=" text-red-600">Recover Now</a></p>
+       <p className={!showPassword ? "hidden":"text-center my-5 text-gray-500 text-sm"}>Forgot Password? <a href="/recovery" className=" text-red-600">Recover Now</a></p>
 
       </div>
     </div>

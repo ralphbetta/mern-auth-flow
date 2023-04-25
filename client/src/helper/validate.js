@@ -23,11 +23,22 @@ export async function passwordValidate(values){
     return errors;
 }
 
+
+export async function resetPasswordValidate(values){
+    const errors = {}; 
+
+    if(values.password != values.confirm_password){
+        errors.exist = toast.error("Password does not match....!");
+    }
+    return errors;
+}
+
+
 function passwordVerify(error = {}, values){
 
    var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{5,}$/;
 
-    if(!values.password){
+    if(!values. password){
         error.password = toast.error("Password Required....!");
     }else if(values.password.includes(" ")){
         error.password = toast.error("Invalid Password....!");
