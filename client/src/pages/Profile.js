@@ -13,11 +13,13 @@ const Profile = () => {
 
   const formik = useFormik({
     initialValues: {
-      email: '',
-      username: '',
-      password:''
+      firstname: '',
+      lastname: '',
+      mobile:'',
+      email:'',
+      address:'',
     },
-    validate: registerValidation,
+    // validate: registerValidation,
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit: async values => {
@@ -40,8 +42,8 @@ const Profile = () => {
       <Toaster position='top-center' reverseOrder={false} ></Toaster>
 
       <div className="glass">
-        <h1 className=" text-black font-black text-3xl text-center mt-10">Register</h1>
-        <p className="mt-5     text-gray-400 text-xs align-middle text-center px-[25%]"> Happy to join us.</p>
+        <h1 className=" text-black font-black text-3xl text-center mt-10">Profile</h1>
+        <p className="mt-5     text-gray-400 text-xs align-middle text-center px-[25%]"> You can update your profile </p>
        
       <form action="" onSubmit={formik.handleSubmit} className="">
         
@@ -51,14 +53,24 @@ const Profile = () => {
         <input onChange={onUpload} type="file" className="hidden" id='profile' name='profile'  />
 
       <div className="flex flex-col justify-center items-center space-y-3">
+      <div className="flex gap-4 px-3">
+      <input {...formik.getFieldProps('firstname')} type="text" placeholder='Firstname' className="textbox" />
+      <input {...formik.getFieldProps('lastname')} type="text" placeholder='Lastname' className="textbox" />
+      </div>
+      <div className="flex gap-4 px-3">
+      <input {...formik.getFieldProps('mobile')} type="text" placeholder='Mobile No.' className="textbox" />
       <input {...formik.getFieldProps('email')} type="text" placeholder='Email' className="textbox" />
-      <input {...formik.getFieldProps('username')} type="text" placeholder='Username' className="textbox" />
-      <input {...formik.getFieldProps('password')} type="text" placeholder='Password' className="textbox" />
-       <button type='submit' className='btn'>Register</button>
+      </div>
+
+     
+      <input {...formik.getFieldProps('address')} type="text" placeholder='Address' className="textbox w-[92%]" />
+
+
+       <button type='submit' className='btn'>Update</button>
       </div>
 
       </form>
-       <p className={showPassword ? "hidden":"text-center my-5 text-gray-500 text-sm"}>Already Register? <a href="/login" className=" text-red-600">Login Now</a></p>
+       <p className={showPassword ? "hidden":"text-center my-5 text-gray-500 text-sm"}>Come back later? <a href="/login" className=" text-red-600">Logout</a></p>
 
       </div>
     </div>
