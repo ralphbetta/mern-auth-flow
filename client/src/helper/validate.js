@@ -48,3 +48,25 @@ function passwordVerify(error = {}, values){
         error.password = toast.error("Password must contain special character and digits");
     } 
 }
+
+function emailVerify(error = {}, values){
+
+    var regularExpression = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/;
+ 
+     if(!values.email){
+         error.email = toast.error("Email Required....!");
+     }else if(values.email.includes(" ")){
+         error.email = toast.error("Wrong Email....!");
+     }else if(!regularExpression.test(values.email)){
+         error.email = toast.error("Invalid Email");
+     } 
+
+     return error;
+ }
+
+
+export async function registerValidation(values){
+    const errors =  usernameVerify({}, values);
+    passwordVerify(errors, values);
+    emailVerify(errors, values);
+}
