@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const conntect = require('./database/connection');
-
+const router = require('./router/route');
 
 const app = express();
 
@@ -18,6 +18,8 @@ const port  = 8080;
 app.get('/', (req,res)=>{
     res.status(200).json("Home Get Request");
 });
+
+app.use('/', router);
 
 
 conntect().then(()=>{
