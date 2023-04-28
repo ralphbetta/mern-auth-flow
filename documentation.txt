@@ -40,3 +40,10 @@ FOR tailwindcss
 //usage -- scroll to different section of the screen
  ---- import {Link } from 'react-scroll'  
 //<Link to={'href'} spy={true} offset={-200} smooth={true} duration={500} offset={-50} className='font-bold transiton-all duration-300 onClick={  }'>{link}</Link>
+
+
+
+NODE js
+
+>> npm init -y
+>> npm i express cors mongoose mongodb-memory-server multer    
