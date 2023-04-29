@@ -1,22 +1,22 @@
 
 const express = require('express');
+const { register, login, getUser, generateOTP, verifyOTP, createResetSession, resetPassword, updateUser } = require('../controller/appController');
 
 
 const router = express.Router();
-
-router.post('/register', (req, res)=> res.json(req.body));
+router.post('/register', register);
 router.post('/registerMail', (req, res)=> res.json(req.body));
 router.post('/authenticate', (req, res)=> res.json(req.body));
-router.post('/login', (req, res)=> res.json(req.body));
+router.post('/login', login);
 
 
-router.get('/users/:username', (req, res)=> res.json(req.body));
-router.get('/generateOTP', (req, res)=> res.json(req.body));
-router.get('/verifyOTP', (req, res)=> res.json(req.body));
-router.get('/createResetSession', (req, res)=> res.json(req.body));
+router.get('/users/:username', getUser);
+router.get('/generateOTP', generateOTP);
+router.get('/verifyOTP', verifyOTP);
+router.get('/createResetSession', createResetSession);
 
-router.put('/updateUser', (req, res)=> res.json(req.body));
-router.put('/resetPassword', (req, res)=> res.json(req.body));
+router.put('/updateUser', updateUser  );
+router.put('/resetPassword', resetPassword);
 
 module.exports = router;
 
